@@ -1,5 +1,18 @@
 
 
+function contar(frase) {
+    var cont = 0
+    for (let index = 0; index < frase.length; index++) {
+        if (frase[index] === " ") {
+            cont = cont + 1
+        } else {
+            continue
+        }
+    }
+    return cont
+}
+
+
 
 
 function mostrar() {
@@ -16,21 +29,16 @@ function mostrar() {
     // var inputValue=document.getElementById("ipt1").value;
     // document.getElementById("result").innerHTML=inputValue;
     // document.getElementById("btn1").style.display="none";
-
-
     var naosei = document.getElementById("ipt1").value;
-    var cont = 0
-    for (let index = 0; index < naosei.length; index++) {
-        //  const element = array[index];
-        if (naosei[index]===" ") {
-            cont = cont + 1
-        }
-        else {
-            continue
-        }
-    }
+    var naosei2 = document.getElementById("ipt2").value;
+    
 
-    document.getElementById("result").innerHTML = cont;
+
+
+
+
+    document.getElementById("result").innerHTML = "No 1o paragrafo estavam " + contar(naosei) + " espacos";
+    document.getElementById("result2").innerHTML = "No 2o paragrafo estavam " + contar(naosei2) + " espacos";
 
 }
 
